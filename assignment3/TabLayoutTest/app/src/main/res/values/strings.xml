@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TabLayoutTest</string>
+    <string name="btn_add">Add</string>
+    <string name="enter_android_code_name">Enter Android Code Name</string>
+    <string name="enter_android_version">Enter Android Version</string>
+    <string name="column_name">Code Name</string>
+    <string name="version">Version</string>
 </resources>
