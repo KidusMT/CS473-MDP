@@ -1,5 +1,8 @@
-# CS473-MDP
-CS473 Mobile Device Programming - Lab and Demo Resources for the course
+<p align="center">
+    <img src="android_logo.png" width="150" />
+    <h2 align="center"> CS473-MDP - Mobile Device Programming </h2>
+    <p align="center"> <code> Lab and Demo Resources for the course. </code> </p>
+</p>
 
 # Screenshots
 <h2>Assignment 2</h2>
