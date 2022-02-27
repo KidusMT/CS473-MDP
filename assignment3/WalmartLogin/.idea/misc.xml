@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/btn_bg_curved_stroke.xml" value="0.282" />
+        <entry key="app/src/main/res/drawable/btn_bg_curved_stroke_white.xml" value="0.2355" />
+        <entry key="app/src/main/res/drawable/btn_sign_up.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/btn_signup_bg.xml" value="0.2075" />
         <entry key="app/src/main/res/drawable/input_bg_curved_grey.xml" value="0.282" />
         <entry key="app/src/main/res/drawable/walmart_logo.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.23324275362318841" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.264" />
       </map>
     </option>
   </component>
