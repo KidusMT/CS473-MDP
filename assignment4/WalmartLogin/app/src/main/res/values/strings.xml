@@ -27,4 +27,8 @@
     <string name="layout_no_internet_content_description_logo">Logo</string>
     <string name="login_title">Sign in to your account</string>
     <string name="divider">divider</string>
+    <string name="electronics">Electronics</string>
+    <string name="clothes">Clothes</string>
+    <string name="beauty">Beauty</string>
+    <string name="food">Food</string>
 </resources>

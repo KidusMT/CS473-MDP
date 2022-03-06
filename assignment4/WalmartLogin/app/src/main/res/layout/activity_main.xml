@@ -9,7 +9,7 @@
     android:paddingTop="30dp"
     android:paddingBottom="30dp"
     tools:ignore="UselessParent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -147,6 +147,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/btn_bg_curved_stroke"
                 android:text="@string/login_btn"
+                android:onClick="onSign"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
