@@ -29,4 +29,26 @@
         <td><img src="assignment3/WalmartLogin_Screenshots/Screenshot_20220226_200035.png" width="150" /></td>
     </tr>
 </table>
+<hr/>
+<h2>Assignment 4</h2>
+<p align="center">
+<table border="0">
+    <tr>
+        <td><img src="assignment4/WalmartLogin_Screenshots/01.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/02.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/03.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/04.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/05.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/06.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/07.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/08.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/09.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/10.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/11.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/12.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/13.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/14.png" width="150" /></td>
+        <td><img src="assignment4/WalmartLogin_Screenshots/15.png" width="150" /></td>
+    </tr>
+</table>
 </p>
