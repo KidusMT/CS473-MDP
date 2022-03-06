@@ -31,4 +31,10 @@
     <string name="clothes">Clothes</string>
     <string name="beauty">Beauty</string>
     <string name="food">Food</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="first_name">First name*</string>
+    <string name="last_name">Last name*</string>
+    <string name="password">Password*</string>
+    <string name="create_account">Create Account</string>
+    <string name="email_address">Email address*</string>
 </resources>
