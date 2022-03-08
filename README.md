@@ -65,12 +65,12 @@
         </span>
     </tr>
     <tr>
-        <td><img src="assignment5/Walmart_Screenshots_Assignment5/01.png" width="150" /></td>
-        <td><img src="assignment5/Walmart_Screenshots_Assignment5/02.png" width="150" /></td>
-        <td><img src="assignment5/Walmart_Screenshots_Assignment5/03.png" width="150" /></td>
-        <td><img src="assignment5/Walmart_Screenshots_Assignment5/04.png" width="150" /></td>
-        <td><img src="assignment5/Walmart_Screenshots_Assignment5/05.png" width="150" /></td>
-        <td><img src="assignment5/Walmart_Screenshots_Assignment5/06.png" width="150" /></td>
+        <td><img src="assignment5/QuizApp_Screenshots_Assignment5/01.png" width="150" /></td>
+        <td><img src="assignment5/QuizApp_Screenshots_Assignment5/02.png" width="150" /></td>
+        <td><img src="assignment5/QuizApp_Screenshots_Assignment5/03.png" width="150" /></td>
+        <td><img src="assignment5/QuizApp_Screenshots_Assignment5/04.png" width="150" /></td>
+        <td><img src="assignment5/QuizApp_Screenshots_Assignment5/05.png" width="150" /></td>
+        <td><img src="assignment5/QuizApp_Screenshots_Assignment5/06.png" width="150" /></td>
     </tr>
 </table>
 <table border="0">
