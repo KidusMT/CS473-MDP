@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/drawable/btn_signup_bg.xml" value="0.2075" />
         <entry key="app/src/main/res/drawable/input_bg_curved_grey.xml" value="0.282" />
         <entry key="app/src/main/res/drawable/walmart_logo.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_electronics_detail.xml" value="0.264" />
         <entry key="app/src/main/res/layout/activity_electronics_item.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.4" />
