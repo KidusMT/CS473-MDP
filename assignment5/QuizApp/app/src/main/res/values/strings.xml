@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">QuizApp</string>
+    <string name="_1_questions_list">1. questions list</string>
+    <string name="_2_questions_list">2. questions list</string>
 </resources>
