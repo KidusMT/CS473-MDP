@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">CVBuilderApp</string>
+    <string name="kidus_tekeste">Kidus Tekeste</string>
+    <string name="software_engineer">Software Engineer</string>
+    <string name="career_note">Experienced Full-stack Java/Kotlin developer with over 4 years of hands-on experience on enterprise software development by implementing complete software development life cycle phases.</string>
 </resources>
