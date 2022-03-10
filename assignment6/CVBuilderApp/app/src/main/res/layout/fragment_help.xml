@@ -4,7 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -27,14 +31,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/career_note_label"
+                    android:text="@string/about_me_label"
                     android:fontFamily="sans-serif-black"
                     android:textSize="18sp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/career_note"
-                    android:textSize="18sp" />
+                    android:text="@string/about_me"
+                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -56,14 +60,80 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/work_experience_label"
+                    android:text="@string/education"
                     android:fontFamily="sans-serif-black"
                     android:textSize="18sp"/>
                 <TextView
+                    android:textColor="@color/mater_grey_400"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/work_experience"
-                    android:textSize="18sp" />
+                    android:text="@string/my_college"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/horizontal_margin_8"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/miu"/>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textSize="18sp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/maharishi_international_university"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="12sp"
+                            android:textColor="@color/mater_grey_400"
+                            android:text="@string/master_of_science_in_computer_science"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/horizontal_margin_8"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/stanford"/>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textSize="18sp"
+                            android:text="@string/stanford_university"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="12sp"
+                            android:textColor="@color/mater_grey_400"
+                            android:text="@string/bachelors_of_science_in_computer_science"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -85,14 +155,74 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Career Note"
+                    android:text="@string/certification"
                     android:fontFamily="sans-serif-black"
                     android:textSize="18sp"/>
-                <TextView
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/horizontal_margin_8"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/career_note"
-                    android:textSize="18sp" />
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/android"/>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textSize="18sp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/associate_android_developer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="12sp"
+                            android:textColor="@color/mater_grey_400"
+                            android:text="@string/_11_8_2020"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/horizontal_margin_8"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/oracle"/>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textSize="18sp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/oracle_db_12c_administrator_certified_professional"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="12sp"
+                            android:textColor="@color/mater_grey_400"
+                            android:text="@string/_2_5_2019"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -125,4 +255,5 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
+    </ScrollView>
 </FrameLayout>

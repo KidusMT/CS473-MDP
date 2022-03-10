@@ -7,4 +7,17 @@
     </string>
     <string name="work_experience_label">Work Experience</string>
     <string name="career_note_label">Career Note</string>
+    <string name="about_me_label">About Me</string>
+    <string name="about_me">Experienced Full-stack Java/Kotlin developer with over 4 years of hands-on experience on modern Java-based technologies, mainly using Spring and Hibernate with databases like oracle, plsql, MySQL, and MongoDB. I used ReactJS for front-end development. I have worked on business domains like construction, internet-of-things, hospitality, health, e-commerce and agriculture. I am a very good team player and quick learner.</string>
+    <string name="my_college">My College</string>
+    <string name="education">Education</string>
+    <string name="associate_android_developer">Associate Android Developer</string>
+    <string name="_11_8_2020">11/8/2020</string>
+    <string name="certification">Certification</string>
+    <string name="stanford_university">Stanford University</string>
+    <string name="bachelors_of_science_in_computer_science">Bachelors of Science in Computer Science</string>
+    <string name="master_of_science_in_computer_science">Master of Science in Computer Science</string>
+    <string name="maharishi_international_university">Maharishi International University</string>
+    <string name="oracle_db_12c_administrator_certified_professional">Oracle DB 12c Administrator Certified Professional</string>
+    <string name="_2_5_2019">2/5/2019</string>
 </resources>
