@@ -2,10 +2,57 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
 
-    <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner"
+            android:alpha="0.6"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile"
+            app:civ_border_width="5dp"
+            app:civ_border_color="#fff"/>
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kidus Tekeste"
+                android:textColor="@color/mater_grey_800"
+                android:textSize="18sp" />
+            <TextView
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Software Engineer"
+                android:textColor="@color/mater_grey_800"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
