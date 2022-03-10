@@ -3,4 +3,8 @@
     <string name="kidus_tekeste">Kidus Tekeste</string>
     <string name="software_engineer">Software Engineer</string>
     <string name="career_note">Experienced Full-stack Java/Kotlin developer with over 4 years of hands-on experience on enterprise software development by implementing complete software development life cycle phases.</string>
+    <string name="work_experience"><b>Languages</b>: Java 8, Kotlin\n<b>Web Services</b>: RESTful API, Microservices\n<b>Design Patterns</b>: Dependency Injection, Dagger1, Dagger2, Adapter, Observer,Factory, MVP, MVC, MVVM\n<b>SDLC</b>: Agile/Scrum, Test-Driven Development
+    </string>
+    <string name="work_experience_label">Work Experience</string>
+    <string name="career_note_label">Career Note</string>
 </resources>

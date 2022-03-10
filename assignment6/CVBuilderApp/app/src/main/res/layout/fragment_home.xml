@@ -75,12 +75,68 @@
                 <LinearLayout
                     android:layout_margin="@dimen/horizontal_margin_8"
                     android:clickable="true"
-                    android:onClick="onElectronicsClick"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:focusable="true"
-                    tools:ignore="UsingOnClickInXml">
+                    android:focusable="true">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/career_note_label"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/career_note"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="22dp">
+                <LinearLayout
+                    android:layout_margin="@dimen/horizontal_margin_8"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:focusable="true">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/work_experience_label"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/work_experience"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="22dp">
+                <LinearLayout
+                    android:layout_margin="@dimen/horizontal_margin_8"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:focusable="true">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -106,74 +162,10 @@
                 <LinearLayout
                     android:layout_margin="@dimen/horizontal_margin_8"
                     android:clickable="true"
-                    android:onClick="onElectronicsClick"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:focusable="true"
-                    tools:ignore="UsingOnClickInXml">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Career Note"
-                        android:fontFamily="sans-serif-black"
-                        android:textSize="18sp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/career_note"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_marginStart="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="7dp"
-                app:cardElevation="22dp">
-                <LinearLayout
-                    android:layout_margin="@dimen/horizontal_margin_8"
-                    android:clickable="true"
-                    android:onClick="onElectronicsClick"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:focusable="true"
-                    tools:ignore="UsingOnClickInXml">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Career Note"
-                        android:fontFamily="sans-serif-black"
-                        android:textSize="18sp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/career_note"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_marginStart="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="7dp"
-                app:cardElevation="22dp">
-                <LinearLayout
-                    android:layout_margin="@dimen/horizontal_margin_8"
-                    android:clickable="true"
-                    android:onClick="onElectronicsClick"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:focusable="true"
-                    tools:ignore="UsingOnClickInXml">
+                    android:focusable="true">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

@@ -15,10 +15,10 @@ class MyViewAdapter(fm:FragmentManager,lc:Lifecycle) : FragmentStateAdapter(fm,l
     // Provide a new Fragment associated with the specified position.
     override fun createFragment(position: Int): Fragment {
         return   when(position){
-            0->  HomeFragment()
-            1->  WorkFragment()
-            2-> ContactFragment()
-            3->  HelpFragment()
+            0-> HomeFragment()
+            1-> HelpFragment()
+            2-> WorkFragment()
+            3-> ContactFragment()
             else-> Fragment()
         }
     }
