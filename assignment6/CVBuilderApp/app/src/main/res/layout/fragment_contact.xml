@@ -27,17 +27,24 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="My Contact"
+                    android:text="@string/my_contact"
                     android:fontFamily="sans-serif-black"
                     android:textSize="18sp"/>
 
                 <LinearLayout
+                    android:id="@+id/phone"
+                    android:autoLink="phone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:background="@drawable/btn_bg_curved_stroke"
                     android:layout_marginTop="@dimen/horizontal_margin_8"
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:padding="3dp"
                         android:scaleType="fitCenter"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
@@ -54,8 +61,16 @@
                         <TextView
                             android:textSize="18sp"
                             android:maxLines="1"
+                            android:fontFamily="sans-serif-condensed-medium"
                             android:ellipsize="end"
-                            android:text="314-583-9972"
+                            android:text="@string/_314_583_9972"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="12sp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/phone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
 
@@ -63,12 +78,63 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/email"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:background="@drawable/btn_bg_curved_stroke"
                     android:layout_marginTop="@dimen/horizontal_margin_8"
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:padding="3dp"
+                        android:scaleType="fitCenter"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/contact_email"/>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:textSize="18sp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/ktekeste_miu_com"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="12sp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linkedIn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:background="@drawable/btn_bg_curved_stroke"
+                    android:layout_marginTop="@dimen/horizontal_margin_8"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:padding="3dp"
                         android:scaleType="fitCenter"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
@@ -84,21 +150,35 @@
                         android:orientation="vertical">
                         <TextView
                             android:textSize="18sp"
+                            android:fontFamily="sans-serif-condensed-medium"
                             android:maxLines="1"
                             android:ellipsize="end"
-                            android:text="kidus-tekeste"
+                            android:text="@string/kidus_tekeste_linkedIn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="12sp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/linkedin"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/twitter"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:background="@drawable/btn_bg_curved_stroke"
                     android:layout_marginTop="@dimen/horizontal_margin_8"
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:padding="3dp"
                         android:scaleType="fitXY"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
@@ -116,19 +196,33 @@
                             android:textSize="18sp"
                             android:maxLines="1"
                             android:ellipsize="end"
+                            android:fontFamily="sans-serif-condensed-medium"
                             android:text="\@adukidus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="12sp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="Twitter"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/github"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:background="@drawable/btn_bg_curved_stroke"
                     android:layout_marginTop="@dimen/horizontal_margin_8"
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:padding="3dp"
                         android:scaleType="fitCenter"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
@@ -146,7 +240,15 @@
                             android:textSize="18sp"
                             android:maxLines="1"
                             android:ellipsize="end"
-                            android:text="KidusMT"
+                            android:text="@string/kidusmt"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textSize="12sp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/github"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>

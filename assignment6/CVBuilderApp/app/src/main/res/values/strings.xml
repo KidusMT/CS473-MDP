@@ -2,10 +2,10 @@
     <string name="app_name">CVBuilderApp</string>
     <string name="kidus_tekeste">Kidus Tekeste</string>
     <string name="software_engineer">Software Engineer</string>
+    <string name="projects"><b>Waziup</b>:Android Application for farmers using IoT technology.\n<b>Awtar</b>:Music entertainment application in Ethiopia.\n<b>Vere Italie</b>:Italian based restaurant booking app and website.\n<b>ECOMUB</b>:business solutions in ecommerce and logistics sectors.</string>
     <string name="career_note">Experienced Full-stack Java/Kotlin developer with over 4 years of hands-on experience on enterprise software development by implementing complete software development life cycle phases.</string>
     <string name="work_experience"><b>Languages</b>: Java 8, Kotlin\n<b>Web Services</b>: RESTful API, Microservices\n<b>Design Patterns</b>: Dependency Injection, Dagger1, Dagger2, Adapter, Observer,Factory, MVP, MVC, MVVM\n<b>SDLC</b>: Agile/Scrum, Test-Driven Development
     </string>
-    <string name="work_experience_label">Work Experience</string>
     <string name="career_note_label">Career Note</string>
     <string name="about_me_label">About Me</string>
     <string name="about_me">Experienced Full-stack Java/Kotlin developer with over 4 years of hands-on experience on modern Java-based technologies, mainly using Spring and Hibernate with databases like oracle, plsql, MySQL, and MongoDB. I used ReactJS for front-end development. I have worked on business domains like construction, internet-of-things, hospitality, health, e-commerce and agriculture. I am a very good team player and quick learner.</string>
@@ -20,4 +20,34 @@
     <string name="maharishi_international_university">Maharishi International University</string>
     <string name="oracle_db_12c_administrator_certified_professional">Oracle DB 12c Administrator Certified Professional</string>
     <string name="_2_5_2019">2/5/2019</string>
+    <string name="github">GitHub</string>
+    <string name="kidusmt">KidusMT</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="kidus_tekeste_linkedIn">kidus-tekeste</string>
+    <string name="email">Email</string>
+    <string name="ktekeste_miu_com">ktekeste@miu.com</string>
+    <string name="phone">Phone</string>
+    <string name="_314_583_9972">314-583-9972</string>
+    <string name="my_contact">My Contact</string>
+    <string name="voluntary_work">Voluntary Work</string>
+    <string name="peace_corps">Peace Corps</string>
+    <string name="educating_young_students_in_bekoji">Educating Young Students in Bekoji</string>
+    <string name="_2020">2020</string>
+    <string name="addis_ababa_university">Addis Ababa University</string>
+    <string name="educating_students_as_ta">Educating Students as TA</string>
+    <string name="_2018">2018</string>
+    <string name="work_experience_label">Work Experience</string>
+    <string name="meta_facebook_inc">Meta - Facebook Inc.</string>
+    <string name="virtual_reality_content_engineer">Virtual Reality Content Engineer</string>
+    <string name="_2020_present">2020 - Present</string>
+    <string name="google">Google</string>
+    <string name="application_developer_for_youtube">Application Developer for Youtube</string>
+    <string name="_2018_2020">2018 - 2020</string>
+    <string name="amazon">Amazon</string>
+    <string name="sde_ii">SDE II</string>
+    <string name="_2016_2018">2016 - 2018</string>
+    <string name="kforce">Kforce</string>
+    <string name="sr_full_stack_engineer">Sr Full Stack Engineer</string>
+    <string name="_2014_2016">2014 - 2016</string>
+    <string name="projects_label">Projects</string>
 </resources>
