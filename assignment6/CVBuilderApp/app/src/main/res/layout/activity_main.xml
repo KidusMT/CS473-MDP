@@ -5,8 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.miu.CVBuilderApp.ui.MainActivity"
+    tools:context="edu.miu.CVBuilderApp.ui.activity.MainActivity"
     android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="CV Builder"
+        app:titleTextColor="@color/white"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/main_menu"/>
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         app:tabTextAppearance="@style/TabLayoutStyle"

@@ -35,7 +35,6 @@
     <string name="_2020">2020</string>
     <string name="addis_ababa_university">Addis Ababa University</string>
     <string name="educating_students_as_ta">Educating Students as TA</string>
-    <string name="_2018">2018</string>
     <string name="work_experience_label">Work Experience</string>
     <string name="meta_facebook_inc">Meta - Facebook Inc.</string>
     <string name="virtual_reality_content_engineer">Virtual Reality Content Engineer</string>
@@ -50,4 +49,15 @@
     <string name="sr_full_stack_engineer">Sr Full Stack Engineer</string>
     <string name="_2014_2016">2014 - 2016</string>
     <string name="projects_label">Projects</string>
+    <string name="microsoft_devops_engineer">Microsoft DevOps Engineer</string>
+    <string name="_2018">2018</string>
+    <string name="linux_essentials">Linux Essentials</string>
+    <string name="_2019">2019</string>
+    <string name="red_hat_system_administrator">Red Hat System Administrator</string>
+    <string name="_2017_2020">2017-2020</string>
+    <string name="mobile_application_engineer">Mobile Application Engineer</string>
+    <string name="icog_labs">Icog-Labs</string>
+    <string name="machine_learning_intern">Machine Learning Intern</string>
+    <string name="ok">OK</string>
+    <string name="settings">Settings</string>
 </resources>

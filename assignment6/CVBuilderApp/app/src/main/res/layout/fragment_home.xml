@@ -149,6 +149,7 @@
                         android:padding="8dp">
 
                         <TextView
+                            android:textColor="@color/mater_grey_900"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/work_experience"

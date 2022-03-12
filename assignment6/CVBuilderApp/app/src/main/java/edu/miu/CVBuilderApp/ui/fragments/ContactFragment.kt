@@ -1,4 +1,4 @@
-package com.example.tablayoutkotlinlibrary
+package edu.miu.CVBuilderApp.ui.fragments
 
 import CVBuilderApp.R
 import android.content.Intent

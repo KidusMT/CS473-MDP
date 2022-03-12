@@ -293,7 +293,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/oracle" />
+                            android:src="@drawable/cert_aws" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -334,7 +334,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/oracle" />
+                            android:src="@drawable/cert_redhat" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -350,7 +350,7 @@
                                 android:ellipsize="end"
                                 android:textColor="@color/mater_grey_900"
                                 android:maxLines="1"
-                                android:text="@string/oracle_db_12c_administrator_certified_professional"
+                                android:text="@string/red_hat_system_administrator"
                                 android:textSize="18sp" />
 
                             <TextView
@@ -375,7 +375,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/oracle" />
+                            android:src="@drawable/cert_linux" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -391,13 +391,54 @@
                                 android:ellipsize="end"
                                 android:textColor="@color/mater_grey_900"
                                 android:maxLines="1"
-                                android:text="@string/oracle_db_12c_administrator_certified_professional"
+                                android:text="@string/linux_essentials"
                                 android:textSize="18sp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/_2_5_2019"
+                                android:text="@string/_2019"
+                                android:textColor="@color/mater_grey_700"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/horizontal_margin_8"
+                        android:background="@drawable/btn_bg_curved_stroke"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/cert_microsoft" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:textColor="@color/mater_grey_900"
+                                android:maxLines="1"
+                                android:text="@string/microsoft_devops_engineer"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/_2018"
                                 android:textColor="@color/mater_grey_700"
                                 android:textSize="12sp" />
                         </LinearLayout>

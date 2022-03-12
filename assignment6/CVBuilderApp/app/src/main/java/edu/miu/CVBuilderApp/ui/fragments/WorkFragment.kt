@@ -1,4 +1,4 @@
-package com.miu.tabviewpager
+package edu.miu.CVBuilderApp.ui.fragments
 
 
 import CVBuilderApp.R

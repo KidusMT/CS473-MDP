@@ -1,13 +1,13 @@
-package edu.miu.CVBuilderApp.ui
+package edu.miu.CVBuilderApp.ui.activity
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.tablayoutkotlinlibrary.ContactFragment
-import com.example.tablayoutkotlinlibrary.HomeFragment
-import com.miu.tabviewpager.HelpFragment
-import com.miu.tabviewpager.WorkFragment
+import edu.miu.CVBuilderApp.ui.fragments.ContactFragment
+import edu.miu.CVBuilderApp.ui.fragments.HelpFragment
+import edu.miu.CVBuilderApp.ui.fragments.HomeFragment
+import edu.miu.CVBuilderApp.ui.fragments.WorkFragment
 
 class MyViewAdapter(fm:FragmentManager,lc:Lifecycle) : FragmentStateAdapter(fm,lc) {
     // How many Fragments - Returns the total number of items in the data set held by the adapter.
