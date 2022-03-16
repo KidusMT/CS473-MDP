@@ -30,11 +30,13 @@
                 android:text="Dark"
                 android:gravity="center_vertical"
                 android:textSize="18sp"
+                android:textColor="@color/mater_grey_900"
                 android:layout_width="match_parent"
                 android:layout_height="47dp"/>
             <TextView
                 android:text="Light"
                 android:textSize="18sp"
+                android:textColor="@color/mater_grey_900"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="47dp"/>
@@ -50,12 +52,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <RadioButton
-                    android:id="@+id/radio_q1_a"
+                    android:id="@+id/radio_dark"
                     android:textSize="18sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <RadioButton
-                    android:id="@+id/radio_q1_b"
+                    android:id="@+id/radio_light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"/>
@@ -69,8 +71,8 @@
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/btn_ok"
-            android:text="@string/ok"
+            android:id="@+id/btn_cancel"
+            android:text="@string/cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>

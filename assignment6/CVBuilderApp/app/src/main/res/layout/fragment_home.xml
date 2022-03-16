@@ -85,7 +85,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:textColor="@color/mater_grey_700"
+                        android:textColor="@color/textCardTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-black"
@@ -130,7 +130,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:textColor="@color/mater_grey_700"
+                        android:textColor="@color/textCardTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-black"
@@ -174,7 +174,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:textColor="@color/mater_grey_700"
+                        android:textColor="@color/textCardTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-black"

@@ -4,17 +4,20 @@ import CVBuilderApp.R
 import CVBuilderApp.databinding.ActivityMainBinding
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import edu.miu.CVBuilderApp.ui.dialog.SettingsDialog
+import edu.miu.CVBuilderApp.utils.Utils
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), DialogCommunicator {
 
     private lateinit var binding: ActivityMainBinding
     private var result: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
+//        setTheme(if (someSettings.get(PREFFERED_THEME)) R.style.AppThemeLight else R.style.AppThemeDark)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -57,6 +60,23 @@ class MainActivity : AppCompatActivity() {
     private fun showNoticeDialog() {
         val dialog = SettingsDialog()
         dialog.show(supportFragmentManager, "SettingsFragment")
+    }
+
+    override fun onChangeTheme(theme: String) {
+//        println(theme)
+//        Toast.makeText(this, theme, Toast.LENGTH_LONG).show()
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+
+        if(theme== Utils.DARK) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//        AppSettings settings = AppSettings.getInstance(this);
+//        settings.set(AppSettings.Key.USE_DARK_THEME,
+//            !settings.getBoolean(AppSettings.Key.USE_DARK_THEME));
+//        Intent intent = new Intent(this, <yourclass>.class);
+//        startActivity(intent);
+//        finish();
+//        recreate()
     }
 
 }

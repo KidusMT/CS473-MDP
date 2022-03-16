@@ -25,7 +25,7 @@
                 android:orientation="vertical"
                 android:focusable="true">
                 <TextView
-                    android:textColor="@color/mater_grey_700"
+                    android:textColor="@color/textCardTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/my_contact"

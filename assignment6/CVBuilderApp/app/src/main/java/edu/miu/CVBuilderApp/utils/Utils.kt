@@ -1,4 +1,6 @@
 package edu.miu.CVBuilderApp.utils
 
-class Utils {
+object Utils {
+    val LIGHT = "light"
+    val DARK = "dark"
 }
