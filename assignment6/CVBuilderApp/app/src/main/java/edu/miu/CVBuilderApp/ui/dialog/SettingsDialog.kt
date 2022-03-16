@@ -3,7 +3,6 @@ package edu.miu.CVBuilderApp.ui.dialog
 import CVBuilderApp.R
 import android.app.Dialog
 import android.content.Context
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -17,24 +16,20 @@ import edu.miu.CVBuilderApp.utils.Utils
 
 class SettingsDialog : DialogFragment() {
     private lateinit var communicator: DialogCommunicator
-    private lateinit var sharedPref: SharedPreferences
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-         val dialog = activity?.let {
+        val dialog = activity?.let {
             val builder = AlertDialog.Builder(it)
-            // Get the layout inflater
-            val inflater = requireActivity().layoutInflater;
+            val inflater = requireActivity().layoutInflater
             val view = inflater.inflate(R.layout.dialog_settings, null)
 
-             val theme = AppUtils.getPref(getString(R.string.saved_theme))
+            val theme = AppUtils.getPref(getString(R.string.saved_theme))
 
-            // Inflate and set the layout for the dialog
-            // Pass null as the parent view because its going in the dialog layout
             builder.setView(view).apply {
-                view.findViewById<Button>(R.id.btn_cancel)?.setOnClickListener{dismiss()}
+                view.findViewById<Button>(R.id.btn_cancel)?.setOnClickListener { dismiss() }
                 val darkRB = view.findViewById<RadioButton>(R.id.radio_dark)
                 val lightRB = view.findViewById<RadioButton>(R.id.radio_light)
 
-                if(theme == Utils.DARK) darkRB.performClick() else lightRB.performClick()
+                if (theme == Utils.DARK) darkRB.performClick() else lightRB.performClick()
 
                 darkRB.setOnClickListener { v ->
                     val radio = v as RadioButton
@@ -56,7 +51,7 @@ class SettingsDialog : DialogFragment() {
                 }
             }
             builder.create()
-        } ?: throw IllegalStateException("Activity cannot be null")
+        } ?: throw IllegalStateException(getString(R.string.something_went_wrong))
 
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         return dialog

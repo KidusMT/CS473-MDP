@@ -16,7 +16,6 @@ import edu.miu.CVBuilderApp.utils.Utils
 class MainActivity : AppCompatActivity(), DialogCommunicator {
 
     private lateinit var binding: ActivityMainBinding
-    private var result: Long = 0
     private lateinit var sharedPref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,31 +27,15 @@ class MainActivity : AppCompatActivity(), DialogCommunicator {
         val theme = sharedPref.getString(getString(R.string.saved_theme), "")
         if(theme!=null) decideTheme(theme)
 
-        // Create an object for the Adapter Class
         val adapter = MyViewAdapter(supportFragmentManager,lifecycle)
-        // Set the Adapter to your Viewpager UI
         binding.pager.adapter = adapter
         binding.tabLayout.tabGravity = TabLayout.GRAVITY_FILL
-        /* Setting up Tab Layout with the ViewPageg2 is handled by the TabLayoutMediator
-        * by passing your tablayout id and viewpager id*/
         TabLayoutMediator(binding.tabLayout,binding.pager){tab,position->
             when(position){
-                0->{
-                    tab.text="Home"
-//                    tab.setIcon(R.drawable.home)
-                }
-                1->{
-                    tab.text="About Me"
-//                    tab.setIcon(R.drawable.help)
-                }
-                2->{
-                    tab.text="Work"
-//                    tab.setIcon(R.drawable.work)
-                }
-                3->{
-                    tab.text = "Contact"
-//                    tab.setIcon(R.drawable.contact)
-                }
+                0-> tab.text = getString(R.string.home_menu)
+                1-> tab.text = getString(R.string.about_me_menu)
+                2-> tab.text = getString(R.string.work_menu)
+                3-> tab.text = getString(R.string.contact_menu)
             }
         }.attach()
 
@@ -66,7 +49,7 @@ class MainActivity : AppCompatActivity(), DialogCommunicator {
 
     private fun showNoticeDialog() {
         val dialog = SettingsDialog()
-        dialog.show(supportFragmentManager, "SettingsFragment")
+        dialog.show(supportFragmentManager, SettingsDialog::class.java.name)
     }
 
     override fun onChangeTheme(theme: String) {
@@ -74,7 +57,6 @@ class MainActivity : AppCompatActivity(), DialogCommunicator {
             this?.putString(getString(R.string.saved_theme), theme)
             this?.apply()
         }
-
         decideTheme(theme)
     }
 

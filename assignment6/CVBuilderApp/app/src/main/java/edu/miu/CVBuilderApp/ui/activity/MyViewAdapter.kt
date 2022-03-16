@@ -10,9 +10,7 @@ import edu.miu.CVBuilderApp.ui.fragments.HomeFragment
 import edu.miu.CVBuilderApp.ui.fragments.WorkFragment
 
 class MyViewAdapter(fm:FragmentManager,lc:Lifecycle) : FragmentStateAdapter(fm,lc) {
-    // How many Fragments - Returns the total number of items in the data set held by the adapter.
     override fun getItemCount(): Int = 4
-    // Provide a new Fragment associated with the specified position.
     override fun createFragment(position: Int): Fragment {
         return   when(position){
             0-> HomeFragment()
