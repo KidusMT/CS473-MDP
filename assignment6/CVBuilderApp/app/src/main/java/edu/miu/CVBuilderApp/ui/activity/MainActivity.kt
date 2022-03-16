@@ -2,12 +2,14 @@ package edu.miu.CVBuilderApp.ui.activity
 
 import CVBuilderApp.R
 import CVBuilderApp.databinding.ActivityMainBinding
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import edu.miu.CVBuilderApp.ui.dialog.SettingsDialog
+import edu.miu.CVBuilderApp.utils.AppUtils
 import edu.miu.CVBuilderApp.utils.Utils
 
 
@@ -15,12 +17,17 @@ class MainActivity : AppCompatActivity(), DialogCommunicator {
 
     private lateinit var binding: ActivityMainBinding
     private var result: Long = 0
+    private lateinit var sharedPref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
-//        setTheme(if (someSettings.get(PREFFERED_THEME)) R.style.AppThemeLight else R.style.AppThemeDark)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sharedPref = AppUtils.setPref(this)
+
+        val theme = sharedPref.getString(getString(R.string.saved_theme), "")
+        if(theme!=null) decideTheme(theme)
+
         // Create an object for the Adapter Class
         val adapter = MyViewAdapter(supportFragmentManager,lifecycle)
         // Set the Adapter to your Viewpager UI
@@ -63,20 +70,17 @@ class MainActivity : AppCompatActivity(), DialogCommunicator {
     }
 
     override fun onChangeTheme(theme: String) {
-//        println(theme)
-//        Toast.makeText(this, theme, Toast.LENGTH_LONG).show()
-//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        with (sharedPref.edit()) {
+            this?.putString(getString(R.string.saved_theme), theme)
+            this?.apply()
+        }
 
+        decideTheme(theme)
+    }
+
+    fun decideTheme(theme: String){
         if(theme== Utils.DARK) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//        AppSettings settings = AppSettings.getInstance(this);
-//        settings.set(AppSettings.Key.USE_DARK_THEME,
-//            !settings.getBoolean(AppSettings.Key.USE_DARK_THEME));
-//        Intent intent = new Intent(this, <yourclass>.class);
-//        startActivity(intent);
-//        finish();
-//        recreate()
     }
 
 }
