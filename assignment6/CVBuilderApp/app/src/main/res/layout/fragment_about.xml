@@ -274,7 +274,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/_2_5_2019"
+                                android:text="@string/_4_7_2019"
                                 android:textColor="@color/mater_grey_700"
                                 android:textSize="12sp" />
                         </LinearLayout>
@@ -315,7 +315,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/_2_5_2019"
+                                android:text="@string/_3_8_2020"
                                 android:textColor="@color/mater_grey_700"
                                 android:textSize="12sp" />
                         </LinearLayout>
@@ -397,7 +397,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/_2019"
+                                android:text="@string/_1_4_2019"
                                 android:textColor="@color/mater_grey_700"
                                 android:textSize="12sp" />
                         </LinearLayout>
@@ -438,7 +438,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/_2018"
+                                android:text="@string/_8_9_2018"
                                 android:textColor="@color/mater_grey_700"
                                 android:textSize="12sp" />
                         </LinearLayout>
