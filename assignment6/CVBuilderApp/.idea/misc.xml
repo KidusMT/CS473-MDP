@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/btn_sign_up.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/btn_signup_bg.xml" value="0.2075" />
         <entry key="app/src/main/res/drawable/dialog_bg_curved.xml" value="0.1065" />
+        <entry key="app/src/main/res/drawable/ic_plus.xml" value="0.101" />
         <entry key="app/src/main/res/drawable/input_bg_curved_grey.xml" value="0.282" />
         <entry key="app/src/main/res/drawable/walmart_logo.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/work.xml" value="0.188" />
@@ -25,6 +26,7 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="app/src/main/res/layout/fragment_work.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/item_category.xml" value="0.32135416666666666" />
+        <entry key="app/src/main/res/layout/item_work.xml" value="0.264" />
         <entry key="app/src/main/res/layout/shopping_category_main.xml" value="0.13240740740740742" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.3229166666666667" />
       </map>
