@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import edu.miu.CVBuilderApp.ui.activity.WebActivity
 
 class ContactFragment : Fragment(R.layout.fragment_contact) {
 
@@ -35,17 +36,20 @@ class ContactFragment : Fragment(R.layout.fragment_contact) {
     }
 
     private fun onLinkedInClicked() {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.my_linkedin)))
+        val intent = Intent(context, WebActivity::class.java)
+        intent.putExtra(getString(R.string.intent_key), getString(R.string.my_linkedin))
         startActivity(intent)
     }
 
     private fun onTwitterClicked() {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.my_twitter)))
+        val intent = Intent(context, WebActivity::class.java)
+        intent.putExtra(getString(R.string.intent_key), getString(R.string.my_twitter))
         startActivity(intent)
     }
 
     private fun onGithubClicked() {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.my_github)))
+        val intent = Intent(context, WebActivity::class.java)
+        intent.putExtra(getString(R.string.intent_key), getString(R.string.my_github))
         startActivity(intent)
     }
 }
