@@ -12,12 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CVBuilderApp">
         <activity
-            android:name="edu.miu.CVBuilderApp.ui.activity.MainActivity"
+            android:name="edu.miu.CVBuilderApp.ui.activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.miu.CVBuilderApp.ui.activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SENDTO" />

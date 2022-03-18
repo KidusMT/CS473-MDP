@@ -66,6 +66,7 @@
     <string name="about_me_menu">About Me</string>
     <string name="work_menu">Work</string>
     <string name="contact_menu">Contact</string>
+    <string name="login_title">Sign in to your account</string>
     <string name="something_went_wrong">Something went wrong.</string>
     <string name="my_twitter">https://twitter.com/adukidus</string>
     <string name="my_linkedin">https://www.linkedin.com/in/kidus-tekeste/</string>
@@ -85,4 +86,20 @@
     <string name="_8_9_2018">8/9/2018</string>
     <string name="setting">Setting</string>
     <string name="add">add</string>
+    <string name="logout">Logout</string>
+
+    <string name="login_email">Username(required)</string>
+    <string name="login_password">Password(required)</string>
+    <string name="login_email_hint">example@domain.com</string>
+    <string name="login_password_hint">*******</string>
+    <string name="login_btn">Login</string>
+    <string name="login_don_t_have_an_account_yet">Don\'t have an account?</string>
+    <string name="login_link_sign_up">Create a new account</string>
+    <string name="login_forgot_your_password">Forgot your password?</string>
+
+
+    <string name="activity_login_auto_hint_email">Email</string>
+    <string name="activity_login_auto_hint_password">Password</string>
+    <string name="dialog_base_url_auto_hint_url">Url</string>
+    <string name="login_key">user</string>
 </resources>

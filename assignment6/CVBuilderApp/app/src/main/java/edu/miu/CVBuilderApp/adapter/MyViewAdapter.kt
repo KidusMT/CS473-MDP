@@ -1,4 +1,4 @@
-package edu.miu.CVBuilderApp.ui.activity
+package edu.miu.CVBuilderApp.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

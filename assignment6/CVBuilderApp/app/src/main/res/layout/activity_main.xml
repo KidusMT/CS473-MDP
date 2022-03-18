@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         app:title="CV Builder"
         app:titleTextColor="@color/white"
-        android:background="@color/primary"
+        android:theme="@style/App.ToolbarMenuItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/main_menu"/>
