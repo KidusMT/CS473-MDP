@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import edu.miu.CVBuilderApp.data.Work
 
-class WorkAdapter(val context: Context, val products: MutableList<Work>) :
+class WorkAdapter(val context: Context, val workList: MutableList<Work>) :
     RecyclerView.Adapter<BaseViewHolder?>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): BaseViewHolder {
@@ -20,11 +20,16 @@ class WorkAdapter(val context: Context, val products: MutableList<Work>) :
         return AssignedTasksViewHolder(itemEvents)
     }
 
+    fun addWork(work: Work){
+        workList.add(work)
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(baseViewHolder: BaseViewHolder, i: Int) {
         baseViewHolder.onBind(i)
     }
 
-    override fun getItemCount(): Int = products.size
+    override fun getItemCount(): Int = workList.size
 
     inner class AssignedTasksViewHolder(view: View?) : BaseViewHolder(view) {
         var title: TextView? = view?.findViewById(R.id.rv_work_title)
@@ -35,7 +40,7 @@ class WorkAdapter(val context: Context, val products: MutableList<Work>) :
         @SuppressLint("NotifyDataSetChanged")
         override fun onBind(position: Int) {
             super.onBind(position)
-            val product = products[position]
+            val product = workList[position]
 
             image?.setBackgroundResource(product.image)
             title?.text = product.title

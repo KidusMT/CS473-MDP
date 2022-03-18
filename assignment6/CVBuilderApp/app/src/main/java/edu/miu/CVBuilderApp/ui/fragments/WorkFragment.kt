@@ -1,22 +1,23 @@
 package edu.miu.CVBuilderApp.ui.fragments
 
 import CVBuilderApp.R
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import edu.miu.CVBuilderApp.data.Work
+import edu.miu.CVBuilderApp.ui.dialog.WorkDialog
 import edu.miu.walmartlogin.adapter.WorkAdapter
 
 class WorkFragment : Fragment(R.layout.fragment_work) {
 
     private var workList = mutableListOf<Work>()
-
+    private lateinit var adapter: WorkAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
         if(context!=null){
             workList = mutableListOf(
@@ -46,13 +47,23 @@ class WorkFragment : Fragment(R.layout.fragment_work) {
                 )
             )
             recyclerView.layoutManager = LinearLayoutManager(context)
-            val adapter = WorkAdapter(requireContext(), workList)
+            adapter = WorkAdapter(requireContext(), workList)
             recyclerView.adapter = adapter
         }
 
         val fab: View = view.findViewById(R.id.fab)
-        fab.setOnClickListener { view ->
-            Toast.makeText(context, "clicked", Toast.LENGTH_LONG).show()
-        }
+        fab.setOnClickListener { showWorkDialog() }
     }
+
+    private fun showWorkDialog() {
+        val dialog = WorkDialog()
+        dialog.show(parentFragmentManager, WorkDialog::class.java.name)
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun onAddWOrk(work: Work) {
+        workList.add(work)
+        adapter.notifyDataSetChanged()
+    }
+
 }

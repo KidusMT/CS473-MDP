@@ -8,16 +8,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import edu.miu.CVBuilderApp.data.Work
+import edu.miu.CVBuilderApp.ui.dialog.DialogCommunicator
 import edu.miu.CVBuilderApp.ui.dialog.SettingsDialog
+import edu.miu.CVBuilderApp.ui.dialog.WorkDialogCommunicator
 import edu.miu.CVBuilderApp.utils.AppUtils
 import edu.miu.CVBuilderApp.utils.Utils
 
 
-class MainActivity : AppCompatActivity(), DialogCommunicator {
+class MainActivity : AppCompatActivity(), DialogCommunicator, WorkDialogCommunicator {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var sharedPref: SharedPreferences
-
+    private lateinit var adapter: MyViewAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -27,7 +30,7 @@ class MainActivity : AppCompatActivity(), DialogCommunicator {
         val theme = sharedPref.getString(getString(R.string.saved_theme), "")
         if(theme!=null) decideTheme(theme)
 
-        val adapter = MyViewAdapter(supportFragmentManager,lifecycle)
+        adapter = MyViewAdapter(supportFragmentManager,lifecycle)
         binding.pager.adapter = adapter
         binding.tabLayout.tabGravity = TabLayout.GRAVITY_FILL
         TabLayoutMediator(binding.tabLayout,binding.pager){tab,position->
@@ -60,9 +63,13 @@ class MainActivity : AppCompatActivity(), DialogCommunicator {
         decideTheme(theme)
     }
 
-    fun decideTheme(theme: String){
+    private fun decideTheme(theme: String){
         if(theme== Utils.DARK) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         else AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+    }
+
+    override fun onAddWOrk(work: Work) {
+        adapter.addWork(work)
     }
 
 }
