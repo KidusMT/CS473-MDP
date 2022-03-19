@@ -15,11 +15,12 @@ class WorkFragment : Fragment(R.layout.fragment_work) {
 
     private var workList = mutableListOf<Work>()
     private lateinit var adapter: WorkAdapter
+    private lateinit var recyclerView: RecyclerView
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
-        if(context!=null){
+        recyclerView = view.findViewById(R.id.recycler_view)
+        if (context != null) {
             workList = mutableListOf(
                 Work(
                     getString(R.string.meta_facebook_inc),
@@ -46,13 +47,19 @@ class WorkFragment : Fragment(R.layout.fragment_work) {
                     R.drawable.kforce
                 )
             )
-            recyclerView.layoutManager = LinearLayoutManager(context)
-            adapter = WorkAdapter(requireContext(), workList)
-            recyclerView.adapter = adapter
+            setupRecyclerView()
         }
 
         val fab: View = view.findViewById(R.id.fab)
         fab.setOnClickListener { showWorkDialog() }
+    }
+
+    private fun setupRecyclerView() {
+        if (::recyclerView.isInitialized) {
+            recyclerView.layoutManager = LinearLayoutManager(context)
+            adapter = WorkAdapter(requireContext(), workList)
+            recyclerView.adapter = adapter
+        }
     }
 
     private fun showWorkDialog() {
@@ -63,7 +70,11 @@ class WorkFragment : Fragment(R.layout.fragment_work) {
     @SuppressLint("NotifyDataSetChanged")
     fun onAddWOrk(work: Work) {
         workList.add(work)
-        adapter.notifyDataSetChanged()
+        if (::adapter.isInitialized) {
+            adapter.notifyDataSetChanged()
+        } else {
+            setupRecyclerView()
+        }
     }
 
 }

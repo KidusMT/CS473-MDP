@@ -19,6 +19,10 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         sharedPref = AppUtils.setPref(this)
+        val prefUser = AppUtils.getPref(getString(R.string.login_user_key))
+        val prefPass = AppUtils.getPref(getString(R.string.login_pass_key))
+        prefUser?.let { binding.etEmail.setText(it) }
+        prefPass?.let { binding.etPassword.setText(it) }
         val theme = AppUtils.getPref(getString(R.string.saved_theme))
         if (theme != null) AppUtils.decideTheme(theme)
     }
@@ -26,6 +30,7 @@ class LoginActivity : AppCompatActivity() {
     fun onLogin(view: View) {
         val user = binding.etEmail.text.toString().trim()
         val pass = binding.etPassword.text.toString().trim()
+
         if(user.isEmpty()){
             Toast.makeText(applicationContext,"Please enter your username", Toast.LENGTH_LONG).show()
             return
@@ -34,12 +39,13 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(applicationContext,"Please enter your password", Toast.LENGTH_LONG).show()
             return
         }
-        openMainActivity(user)
+        openMainActivity(user, pass)
     }
 
-    private fun openMainActivity(user: String){
+    private fun openMainActivity(user: String, pass: String){
         with(sharedPref.edit()) {
-            putString(getString(R.string.login_key), user)
+            putString(getString(R.string.login_user_key), user)
+            putString(getString(R.string.login_pass_key), pass)
             apply()
         }
 

@@ -26,11 +26,10 @@ class MainActivity : AppCompatActivity(), DialogCommunicator, WorkDialogCommunic
         setContentView(binding.root)
 
         val theme = AppUtils.getPref(getString(R.string.saved_theme))
-        val user = AppUtils.getPref(getString(R.string.login_key))
+        val user = AppUtils.getPref(getString(R.string.login_user_key))
         if (theme != null) AppUtils.decideTheme(theme)
 
-        adapter = MyViewAdapter(supportFragmentManager, lifecycle)
-        binding.pager.adapter = adapter
+        showWorkDialog()
         binding.tabLayout.tabGravity = TabLayout.GRAVITY_FILL
         TabLayoutMediator(binding.tabLayout, binding.pager) { tab, position ->
             when (position) {
@@ -71,8 +70,18 @@ class MainActivity : AppCompatActivity(), DialogCommunicator, WorkDialogCommunic
         AppUtils.decideTheme(theme)
     }
 
+    private fun showWorkDialog() {
+        adapter = MyViewAdapter(supportFragmentManager, lifecycle)
+        binding.pager.adapter = adapter
+    }
+
     override fun onAddWOrk(work: Work) {
-        adapter.addWork(work)
+        if (::adapter.isInitialized) {
+            adapter.addWork(work)
+        } else {
+            showWorkDialog()
+            adapter.addWork(work)
+        }
     }
 
 }

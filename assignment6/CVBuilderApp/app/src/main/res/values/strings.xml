@@ -101,5 +101,6 @@
     <string name="activity_login_auto_hint_email">Email</string>
     <string name="activity_login_auto_hint_password">Password</string>
     <string name="dialog_base_url_auto_hint_url">Url</string>
-    <string name="login_key">user</string>
+    <string name="login_user_key">user</string>
+    <string name="login_pass_key">pass</string>
 </resources>
