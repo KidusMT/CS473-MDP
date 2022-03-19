@@ -72,8 +72,8 @@
     <string name="my_linkedin">https://www.linkedin.com/in/kidus-tekeste/</string>
     <string name="my_github">https://github.com/KidusMT</string>
     <string name="my_email">ktekeste@miu.edu</string>
-    <string name="email_subject">Forgot Password from MDP Course</string>
-    <string name="email_body">Could you please contact me for more information.</string>
+    <string name="email_subject">MDP Course</string>
+    <string name="email_body">Please, reach out to me for more information.</string>
     <string name="my_phone">tel:3145839972</string>
     <string name="intent_filter">mailto:</string>
     <string name="intent_key">web</string>
