@@ -104,3 +104,44 @@
     </tr>
 </table>
 </p>
+<hr/>
+<h2>Assignment 6</h2>
+<p align="center">
+<table border="0">
+    <tr>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/01.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/02.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/03.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/04.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/05.png" width="160" /></td>
+    </tr>
+    <tr>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/06.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/07.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/08.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/09.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/10.png" width="160" /></td>
+    </tr>
+    <tr>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/11.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/12.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/13.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/14.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/15.png" width="160" /></td>
+    </tr>
+    <tr>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/16.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/17.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/18.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/19.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/20.png" width="160" /></td>
+    </tr>
+    <tr>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/21.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/22.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/23.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/24.png" width="160" /></td>
+        <td><img src="assignment6/CVBuilderApp_Screenshots/25.png" width="160" /></td>
+    </tr>
+</table>
+</p>
