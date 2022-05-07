@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_yellow_50"
+    tools:context=".SplashFragment">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:contentDescription="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/miu"/>
+
+        <TextView
+            android:id="@+id/logo_welcome"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maharishi International University" />
+    </LinearLayout>
+
+</FrameLayout>
