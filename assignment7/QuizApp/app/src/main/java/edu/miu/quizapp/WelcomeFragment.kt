@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.content.getSystemService
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
@@ -34,17 +35,8 @@ class WelcomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_welcome, container, false)
-        // Checking for first time launch - before calling setContentView()
-        // Checking for first time launch - before calling setContentView()
         prefManager = PrefManager(context)
-        if (!prefManager?.isFirstTimeLaunch()!!) {
-            launchHomeScreen()
-//            finish()
-        }
-
-        // Making notification bar transparent
 
         // Making notification bar transparent
         if (Build.VERSION.SDK_INT >= 21) {
@@ -52,20 +44,11 @@ class WelcomeFragment : Fragment() {
                 ?.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
         }
 
-//        setContentView(R.layout.activity_welcome)
-
         viewPager = view.findViewById(R.id.view_pager) as ViewPager
         dotsLayout = view.findViewById(R.id.layoutDots) as LinearLayout
         btnSkip = view.findViewById(R.id.btn_skip) as Button
         btnNext = view.findViewById(R.id.btn_next) as Button
 
-
-        // layouts of all welcome sliders
-        // add few more layouts if you want
-
-
-        // layouts of all welcome sliders
-        // add few more layouts if you want
         layouts = intArrayOf(
             R.layout.welcome_slide1,
             R.layout.welcome_slide2,
@@ -73,33 +56,24 @@ class WelcomeFragment : Fragment() {
             R.layout.welcome_slide4
         )
 
-        // adding bottom dots
-
-        // adding bottom dots
         addBottomDots(0)
 
-        // making notification bar transparent
-
-        // making notification bar transparent
         changeStatusBarColor()
 
         myViewPagerAdapter = MyViewPagerAdapter()
         viewPager?.adapter = myViewPagerAdapter
         viewPager?.addOnPageChangeListener(viewPagerPageChangeListener)
 
-//        btnSkip?.setOnClickListener( launchHomeScreen() )
-//
-//        btnNext.setOnClickListener(View.OnClickListener {
-//            // checking for last page
-//            // if last page home screen will be launched
-//            val current: Int = getItem(+1)
-//            if (current < layouts.size) {
-//                // move to next screen
-//                viewPager.setCurrentItem(current)
-//            } else {
-//                launchHomeScreen()
-//            }
-//        })
+        btnSkip?.setOnClickListener { launchHomeScreen() }
+
+        btnNext?.setOnClickListener{
+            val current: Int = getItem(+1)
+            if (current < layouts.size) {
+                viewPager?.currentItem = current
+            } else {
+                launchHomeScreen()
+            }
+        }
         return view
     }
 
@@ -122,13 +96,11 @@ class WelcomeFragment : Fragment() {
         return viewPager!!.currentItem + i
     }
 
-    private fun launchHomeScreen() {
-//        prefManager!!.setFirstTimeLaunch(false)
-//        startActivity(Intent(this@Welcome, MainActivity::class.java))
-//        finish()
+    private fun launchHomeScreen(view:View?=null) {
+        prefManager!!.setFirstTimeLaunch(false)
+        Navigation.findNavController(requireView()).navigate(R.id.action_welcomeFragment_to_homeFragment)
     }
 
-    //  viewpager change listener
     var viewPagerPageChangeListener: OnPageChangeListener = object : OnPageChangeListener {
         override fun onPageSelected(position: Int) {
             addBottomDots(position)
