@@ -12,17 +12,33 @@
         android:padding="16dp"
         tools:ignore="UselessParent"
         tools:context=".ui.MainActivity">
-        <TextView
-            android:fontFamily="sans-serif-black"
-            android:id="@+id/title"
-            android:textAlignment="center"
+        <RelativeLayout
             android:layout_marginBottom="10dp"
-            android:textSize="30sp"
-            android:text="@string/app_name"
+            android:id="@+id/title_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:fontFamily="sans-serif-black"
+                android:id="@+id/title"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:text="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-black"
+                android:id="@+id/tv_score"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:text="@string/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
         <LinearLayout
-            android:layout_below="@id/title"
+            android:layout_below="@id/title_container"
             android:id="@+id/top"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -30,7 +46,7 @@
             <TextView
                 android:textSize="18sp"
                 android:fontFamily="sans-serif-medium"
-                android:id="@+id/question_num_one"
+                android:id="@+id/tv_question"
                 android:text="@string/_1_questions_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -39,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <RadioGroup
-                    android:id="@+id/question_one_radio"
+                    android:id="@+id/question_radio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -48,70 +64,25 @@
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
                         android:text="@string/true_answer"
-                        android:layout_height="wrap_content"
-                        android:onClick="onQ1RadioButtonClicked"/>
+                        android:layout_height="wrap_content"/>
                     <RadioButton
                         android:id="@+id/radio_q1_b"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
-                        android:text="@string/false_answer"
-                        android:onClick="onQ1RadioButtonClicked"/>
+                        android:text="@string/false_answer"/>
                     <RadioButton
                         android:id="@+id/radio_q1_c"
                         android:layout_width="wrap_content"
                         android:textSize="18sp"
                         android:text="@string/i_am_not_sure"
-                        android:layout_height="wrap_content"
-                        android:onClick="onQ1RadioButtonClicked"/>
-                </RadioGroup>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_below="@id/top"
-            android:id="@+id/middle"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:textSize="18sp"
-                android:fontFamily="sans-serif-medium"
-                android:id="@+id/question_num_two"
-                android:text="@string/_2_questions_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <RadioGroup
-                    android:id="@+id/question_two_radio"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        android:layout_height="wrap_content"/>
                     <RadioButton
-                        android:id="@+id/radio_q2_a"
-                        android:textSize="18sp"
+                        android:id="@+id/radio_q1_d"
                         android:layout_width="wrap_content"
-                        android:text="@string/true_answer"
-                        android:layout_height="wrap_content"
-                        android:onClick="onQ2RadioButtonClicked"/>
-                    <RadioButton
-                        android:id="@+id/radio_q2_b"
-                        android:text="@string/false_answer"
                         android:textSize="18sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="onQ2RadioButtonClicked"/>
-                    <RadioButton
-                        android:id="@+id/radio_q2_c"
                         android:text="@string/i_am_not_sure"
-                        android:layout_width="wrap_content"
-                        android:textSize="18sp"
-                        android:layout_height="wrap_content"
-                        android:onClick="onQ2RadioButtonClicked"/>
+                        android:layout_height="wrap_content"/>
                 </RadioGroup>
             </LinearLayout>
         </LinearLayout>
@@ -123,15 +94,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
-                android:onClick="resetSolution"
-                android:text="@string/btn_reset"
+                android:id="@+id/btn_qstn_skip"
+                android:onClick="skipQuestion"
+                android:text="@string/btn_skip"
                 android:layout_marginEnd="3dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
             <Button
-                android:onClick="submitSolution"
-                android:text="submit"
+                android:id="@+id/btn_qstn_next"
+                android:onClick="nextQuestion"
+                android:text="next"
                 android:layout_marginStart="3dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

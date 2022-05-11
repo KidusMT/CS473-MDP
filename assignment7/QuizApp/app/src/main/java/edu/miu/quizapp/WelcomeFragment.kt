@@ -1,7 +1,6 @@
 package edu.miu.quizapp
 
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -10,17 +9,14 @@ import android.view.*
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.core.content.ContextCompat.getSystemService
-import androidx.core.content.getSystemService
-import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
-import edu.miu.quizapp.ui.MainActivity
+import edu.miu.quizapp.utils.BaseFragment
 import edu.miu.quizapp.utils.PrefManager
 
-class WelcomeFragment : Fragment() {
+class WelcomeFragment : BaseFragment() {
 
     private var viewPager: ViewPager? = null
     private var myViewPagerAdapter: MyViewPagerAdapter? = null
@@ -28,7 +24,7 @@ class WelcomeFragment : Fragment() {
     private lateinit var dots: Array<TextView?>
     private lateinit var layouts: IntArray
     private var btnSkip: Button? = null
-    private var btnNext:Button? = null
+    private var btnNext: Button? = null
     private var prefManager: PrefManager? = null
 
     override fun onCreateView(
@@ -39,10 +35,7 @@ class WelcomeFragment : Fragment() {
         prefManager = PrefManager(context)
 
         // Making notification bar transparent
-        if (Build.VERSION.SDK_INT >= 21) {
-            activity?.window?.decorView
-                ?.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
-        }
+        activity?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 
         viewPager = view.findViewById(R.id.view_pager) as ViewPager
         dotsLayout = view.findViewById(R.id.layoutDots) as LinearLayout
@@ -66,7 +59,7 @@ class WelcomeFragment : Fragment() {
 
         btnSkip?.setOnClickListener { launchHomeScreen() }
 
-        btnNext?.setOnClickListener{
+        btnNext?.setOnClickListener {
             val current: Int = getItem(+1)
             if (current < layouts.size) {
                 viewPager?.currentItem = current
@@ -96,9 +89,10 @@ class WelcomeFragment : Fragment() {
         return viewPager!!.currentItem + i
     }
 
-    private fun launchHomeScreen(view:View?=null) {
+    private fun launchHomeScreen(view: View? = null) {
         prefManager!!.setFirstTimeLaunch(false)
-        Navigation.findNavController(requireView()).navigate(R.id.action_welcomeFragment_to_homeFragment)
+        Navigation.findNavController(requireView())
+            .navigate(R.id.action_welcomeFragment_to_homeFragment)
     }
 
     var viewPagerPageChangeListener: OnPageChangeListener = object : OnPageChangeListener {
@@ -122,17 +116,16 @@ class WelcomeFragment : Fragment() {
     }
 
     private fun changeStatusBarColor() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            val window: Window? = activity?.window
-            window?.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window?.statusBarColor = Color.TRANSPARENT
-        }
+        val window: Window? = activity?.window
+        window?.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window?.statusBarColor = Color.TRANSPARENT
     }
 
     inner class MyViewPagerAdapter : PagerAdapter() {
         private var layoutInflater: LayoutInflater? = null
         override fun instantiateItem(container: ViewGroup, position: Int): Any {
-            layoutInflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater?
+            layoutInflater =
+                context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater?
             val view: View? = layoutInflater?.inflate(layouts[position], container, false)
             container.addView(view)
             return view!!

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import edu.miu.quizapp.R
 import edu.miu.quizapp.databinding.ActivityMainBinding
+import edu.miu.quizapp.db.QuizDatabase
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -23,19 +24,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-//    fun onQ1RadioButtonClicked(view: View) {
-//        // correct answer: false - B
-//        if (view is RadioButton) {
-//            // Is the button now checked?
-//            val checked = view.isChecked
-//            when (view.getId()) {
-//                R.id.radio_q1_b ->
-//                    if (checked) {
-//                        result +=50
-//                    }
-//            }
-//        }
-//    }
+    fun onQ1RadioButtonClicked(view: View) {
+        // correct answer: false - B
+        if (view is RadioButton) {
+            // Is the button now checked?
+            val checked = view.isChecked
+            when (view.getId()) {
+                R.id.radio_q1_b ->
+                    if (checked) {
+                        result +=50
+                    }
+            }
+        }
+    }
 //
 //    fun onQ2RadioButtonClicked(view: View) {
 //        // correct answer: true - A
