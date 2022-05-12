@@ -29,4 +29,7 @@
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
     <string name="score">0/15</string>
+    <string name="your_score">Your Score</string>
+    <string name="btn_result_analysis">result analysis</string>
+    <string name="btn_try_again">try again</string>
 </resources>

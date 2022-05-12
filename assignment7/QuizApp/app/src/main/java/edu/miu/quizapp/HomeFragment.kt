@@ -8,13 +8,13 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
+import androidx.navigation.Navigation
 import edu.miu.quizapp.db.Quiz
 import edu.miu.quizapp.db.QuizDatabase
 import edu.miu.quizapp.utils.BaseFragment
-import edu.miu.quizapp.utils.toast
 import kotlinx.coroutines.launch
 
-class HomeFragment : BaseFragment()  {
+class HomeFragment : BaseFragment() {
 
     private lateinit var tvQuestion: TextView
     private lateinit var tvScore: TextView
@@ -52,12 +52,16 @@ class HomeFragment : BaseFragment()  {
         return view
     }
 
-
     private fun changeQuestion(view: View) {
+        if(qstnIdx==15){
+            val action = HomeFragmentDirections.actionHomeFragmentToResultFragment(score)
+            Navigation.findNavController(requireView()).navigate(action)
+            return
+        }
         currentQuiz = questions[qstnIdx]
         tvQuestion.text = currentQuiz.question
         val radioGroup = view.findViewById(R.id.question_radio) as RadioGroup
-        val questionChoices = listOf(currentQuiz.a,currentQuiz.b,currentQuiz.c,currentQuiz.d)
+        val questionChoices = listOf(currentQuiz.a, currentQuiz.b, currentQuiz.c, currentQuiz.d)
         for (i in 0 until radioGroup.childCount) {
             (radioGroup.getChildAt(i) as RadioButton).text = questionChoices[i]
         }
@@ -74,13 +78,12 @@ class HomeFragment : BaseFragment()  {
         }
     }
 
-    private fun evaluateAnswer(ans: String){
-        if(currentQuiz.answer == ans){
+    private fun evaluateAnswer(ans: String) {
+        if (currentQuiz.answer == ans) {
             score++
         }
-        tvScore.text = String.format("%d/15",score)
+        tvScore.text = String.format("%d/15", score)
     }
-
 
 
 }
