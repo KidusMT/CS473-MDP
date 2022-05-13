@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="edu.miu.quizapp.SplashFragment"
+        android:name="edu.miu.quizapp.ui.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="edu.miu.quizapp.HomeFragment"
+        android:name="edu.miu.quizapp.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="edu.miu.quizapp.WelcomeFragment"
+        android:name="edu.miu.quizapp.ui.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="edu.miu.quizapp.ResultFragment"
+        android:name="edu.miu.quizapp.ui.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <action
@@ -54,14 +54,18 @@
             android:name="score"
             app:argType="integer"
             android:defaultValue="0" />
+        <argument android:name="answers"
+            app:argType="string[]" />
     </fragment>
     <fragment
         android:id="@+id/answerFragment"
-        android:name="edu.miu.quizapp.AnswerFragment"
+        android:name="edu.miu.quizapp.ui.AnswerFragment"
         android:label="fragment_answer"
         tools:layout="@layout/fragment_answer" >
         <action
             android:id="@+id/action_answerFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <argument android:name="answers"
+            app:argType="string[]" />
     </fragment>
 </navigation>

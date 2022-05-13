@@ -1,4 +1,4 @@
-package edu.miu.quizapp
+package edu.miu.quizapp.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation
+import edu.miu.quizapp.R
 import edu.miu.quizapp.utils.BaseFragment
 
 class ResultFragment : BaseFragment() {
@@ -22,6 +23,7 @@ class ResultFragment : BaseFragment() {
         val view = inflater.inflate(R.layout.fragment_result, container, false)
         tvScore = view.findViewById(R.id.tv_score)
         val score = ResultFragmentArgs.fromBundle(requireArguments()).score
+        val answers = ResultFragmentArgs.fromBundle(requireArguments()).answers
         val wrongAnswers = 15 - score
         val finalScore = "$score/15"
         val scoreResult = String.format(
@@ -37,7 +39,8 @@ class ResultFragment : BaseFragment() {
             Navigation.findNavController(requireView()).navigate(R.id.action_resultFragment_to_homeFragment)
         }
         btnResult.setOnClickListener {
-            Navigation.findNavController(requireView()).navigate(R.id.action_resultFragment_to_answerFragment)
+            val action = ResultFragmentDirections.actionResultFragmentToAnswerFragment(answers)
+            Navigation.findNavController(requireView()).navigate(action)
         }
         return view
     }

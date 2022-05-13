@@ -1,4 +1,4 @@
-package edu.miu.quizapp
+package edu.miu.quizapp.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,10 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import edu.miu.quizapp.R
 import edu.miu.quizapp.db.Quiz
 import edu.miu.quizapp.db.QuizDatabase
 import edu.miu.quizapp.utils.BaseFragment
@@ -22,9 +25,11 @@ class HomeFragment : BaseFragment() {
     private lateinit var radioGroup: RadioGroup
     private lateinit var questions: List<Quiz>
     private var qstnIdx = 0
-    private var score = 0
+    private var homeViewModel: HomeViewModel? = null
     private var selectedChoice: String? = null
+    private var answers: MutableList<String> = mutableListOf()
     private lateinit var currentQuiz: Quiz
+    private var isFirstTime = true
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,6 +40,11 @@ class HomeFragment : BaseFragment() {
         val nextBtn = view.findViewById<Button>(R.id.btn_qstn_next)
         tvQuestion = view.findViewById(R.id.tv_question)
         tvScore = view.findViewById(R.id.tv_score)
+        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        val scoreLiveData: MutableLiveData<Int> = homeViewModel!!.getInitialScore()
+        scoreLiveData.observe(viewLifecycleOwner) {
+            tvScore.text = String.format("%d/15", it)
+        }
         launch {
             context?.let {
                 questions = QuizDatabase(it).getQuizDao().getAllQuizzes()
@@ -57,8 +67,15 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun changeQuestion(view: View) {
+        if(!isFirstTime){
+            val selectedAns = if(selectedChoice!=null) selectedChoice else ""
+            answers.add(selectedAns!!)
+        }
+        isFirstTime = false
         if (qstnIdx == 15) {
-            val action = HomeFragmentDirections.actionHomeFragmentToResultFragment(score)
+            val action = HomeFragmentDirections.actionHomeFragmentToResultFragment(
+                score = homeViewModel?.getFinalScore()?.value!!, answers = answers.toTypedArray()
+            )
             Navigation.findNavController(requireView()).navigate(action)
             return
         }
@@ -85,9 +102,8 @@ class HomeFragment : BaseFragment() {
 
     private fun evaluateAnswer(ans: String) {
         if (currentQuiz.answer == ans) {
-            score++
+            homeViewModel!!.getCurrentScore()
         }
-        tvScore.text = String.format("%d/15", score)
     }
 
 

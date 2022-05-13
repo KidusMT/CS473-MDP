@@ -1,8 +1,7 @@
-package edu.miu.quizapp
+package edu.miu.quizapp.ui
 
 import android.content.Context
 import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
 import android.text.Html
 import android.view.*
@@ -13,6 +12,7 @@ import androidx.navigation.Navigation
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
+import edu.miu.quizapp.R
 import edu.miu.quizapp.utils.BaseFragment
 import edu.miu.quizapp.utils.PrefManager
 

@@ -1,4 +1,4 @@
-package edu.miu.quizapp
+package edu.miu.quizapp.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,12 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
-import androidx.room.Database
+import edu.miu.quizapp.R
 import edu.miu.quizapp.db.Quiz
 import edu.miu.quizapp.db.QuizDatabase
 import edu.miu.quizapp.utils.BaseFragment
 import edu.miu.quizapp.utils.PrefManager
-import edu.miu.quizapp.utils.toast
 import kotlinx.coroutines.launch
 
 class SplashFragment : BaseFragment() {
