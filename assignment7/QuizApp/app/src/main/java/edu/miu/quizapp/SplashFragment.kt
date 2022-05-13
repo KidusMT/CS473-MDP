@@ -26,6 +26,7 @@ class SplashFragment : BaseFragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_splash, container, false)
         tvWelcome = view.findViewById(R.id.logo_welcome)
+        addQuestionsToDB()
         return view
     }
 
@@ -33,7 +34,6 @@ class SplashFragment : BaseFragment() {
         super.onResume()
         tvWelcome.postDelayed({
             if (!prefManager?.isFirstTimeLaunch()!!) {
-                addQuestionsToDB()
                 Navigation.findNavController(requireView()).navigate(R.id.action_splashFragment_to_homeFragment)
             }else{
                 Navigation.findNavController(requireView()).navigate(R.id.action_splashFragment_to_welcomeFragment)
@@ -92,9 +92,10 @@ class SplashFragment : BaseFragment() {
         launch {
             context?.let {
                 QuizDatabase(it)
+                    .getQuizDao().deleteAllQuiz()
+                QuizDatabase(it)
                     .getQuizDao().addQuizzes(quiz1,quiz2,quiz3,quiz4,quiz5,quiz6,quiz7,quiz8,
                     quiz9,quiz10,quiz11,quiz12,quiz13,quiz14,quiz15)
-                it.toast("Quizzes Saved")
             }
         }
     }

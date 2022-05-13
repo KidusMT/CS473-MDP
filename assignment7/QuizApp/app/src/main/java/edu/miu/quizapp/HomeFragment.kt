@@ -12,6 +12,7 @@ import androidx.navigation.Navigation
 import edu.miu.quizapp.db.Quiz
 import edu.miu.quizapp.db.QuizDatabase
 import edu.miu.quizapp.utils.BaseFragment
+import edu.miu.quizapp.utils.toast
 import kotlinx.coroutines.launch
 
 class HomeFragment : BaseFragment() {
@@ -22,7 +23,7 @@ class HomeFragment : BaseFragment() {
     private lateinit var questions: List<Quiz>
     private var qstnIdx = 0
     private var score = 0
-    private lateinit var selectedChoice: String
+    private var selectedChoice: String? = null
     private lateinit var currentQuiz: Quiz
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,8 +45,11 @@ class HomeFragment : BaseFragment() {
             changeQuestion(view)
         }
         nextBtn.setOnClickListener {
-            evaluateAnswer(selectedChoice)
-            changeQuestion(view)
+            if (selectedChoice != null){
+                evaluateAnswer(selectedChoice!!)
+                changeQuestion(view)
+            } else context?.toast("Pleas select your answer from the choice.")
+
         }
         radioGroup = view.findViewById(R.id.question_radio)
         radioGroup.setOnCheckedChangeListener(this::handler)
@@ -53,7 +57,7 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun changeQuestion(view: View) {
-        if(qstnIdx==15){
+        if (qstnIdx == 15) {
             val action = HomeFragmentDirections.actionHomeFragmentToResultFragment(score)
             Navigation.findNavController(requireView()).navigate(action)
             return
@@ -66,6 +70,7 @@ class HomeFragment : BaseFragment() {
             (radioGroup.getChildAt(i) as RadioButton).text = questionChoices[i]
         }
         qstnIdx++
+        selectedChoice = null
         radioGroup.clearCheck()
     }
 
