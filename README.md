@@ -145,3 +145,41 @@
     </tr>
 </table>
 </p>
+<hr/>
+<h2>Assignment 7</h2>
+<p align="center">
+<table border="0">
+    <tr>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/01.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/02.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/03.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/04.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/05.png" width="160" /></td>
+    </tr>
+    <tr>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/06.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/07.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/08.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/09.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/10.png" width="160" /></td>
+    </tr>
+    <tr>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/11.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/12.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/13.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/14.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/15.png" width="160" /></td>
+    </tr>
+    <tr>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/16.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/17.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/18.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/19.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/20.png" width="160" /></td>
+    </tr>
+    <tr>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/21.png" width="160" /></td>
+        <td><img src="assignment7/QuizApp_Screenshots_Assignment7/22.png" width="160" /></td>
+    </tr>
+</table>
+</p>
