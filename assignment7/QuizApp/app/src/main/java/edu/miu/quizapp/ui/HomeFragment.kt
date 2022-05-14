@@ -14,6 +14,7 @@ import androidx.navigation.Navigation
 import edu.miu.quizapp.R
 import edu.miu.quizapp.db.Quiz
 import edu.miu.quizapp.db.QuizDatabase
+import edu.miu.quizapp.utils.AppUtils.*
 import edu.miu.quizapp.utils.BaseFragment
 import edu.miu.quizapp.utils.toast
 import kotlinx.coroutines.launch
@@ -58,7 +59,7 @@ class HomeFragment : BaseFragment() {
             if (selectedChoice != null){
                 evaluateAnswer(selectedChoice!!)
                 changeQuestion(view)
-            } else context?.toast("Pleas select your answer from the choice.")
+            } else context?.toast(getString(R.string.please_provide_answer_toast_message))
 
         }
         radioGroup = view.findViewById(R.id.question_radio)
@@ -66,7 +67,7 @@ class HomeFragment : BaseFragment() {
         return view
     }
 
-    private fun changeQuestion(view: View) {
+    private fun changeQuestion(view:View) {
         if(!isFirstTime){
             val selectedAns = if(selectedChoice!=null) selectedChoice else ""
             answers.add(selectedAns!!)
@@ -93,10 +94,10 @@ class HomeFragment : BaseFragment() {
 
     private fun handler(group: RadioGroup, checkedId: Int) {
         when (checkedId) {
-            R.id.radio_q1_a -> selectedChoice = "a"
-            R.id.radio_q1_b -> selectedChoice = "b"
-            R.id.radio_q1_c -> selectedChoice = "c"
-            R.id.radio_q1_d -> selectedChoice = "d"
+            R.id.radio_q1_a -> selectedChoice = AnswerChoice.A.value
+            R.id.radio_q1_b -> selectedChoice = AnswerChoice.B.value
+            R.id.radio_q1_c -> selectedChoice = AnswerChoice.C.value
+            R.id.radio_q1_d -> selectedChoice = AnswerChoice.D.value
         }
     }
 

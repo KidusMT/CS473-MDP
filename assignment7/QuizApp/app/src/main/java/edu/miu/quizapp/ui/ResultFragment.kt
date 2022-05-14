@@ -27,10 +27,8 @@ class ResultFragment : BaseFragment() {
         val wrongAnswers = 15 - score
         val finalScore = "$score/15"
         val scoreResult = String.format(
-            "Total Questions: 15\n\n" +
-                    "Correct Answers(Score): %d\n\n" +
-                    "Wrong Answer: %d\n\n" +
-                    "Your Score is: %s", score, wrongAnswers, finalScore
+            "Total Questions: 15\n\nCorrect Answers(Score): %d\n\nWrong Answer: %d\n\nYour Score is: %s",
+            score, wrongAnswers, finalScore
         )
         tvScore.text = scoreResult
         btnResult = view.findViewById(R.id.btn_result_analysis)

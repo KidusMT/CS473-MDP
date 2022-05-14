@@ -1,5 +1,6 @@
 package edu.miu.quizapp.utils
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 
@@ -8,14 +9,11 @@ class PrefManager() {
     var editor: SharedPreferences.Editor? = null
     var _context: Context? = null
 
-    // shared pref mode
     var PRIVATE_MODE = 0
-
-    // Shared preferences file name
     private val PREF_NAME = "quizapp-welcome"
-
     private val IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch"
 
+    @SuppressLint("CommitPrefEdits")
     constructor(context: Context?) : this() {
         _context = context
         pref = _context?.getSharedPreferences(PREF_NAME, PRIVATE_MODE)
